@@ -1,0 +1,48 @@
+@startuml
+
+
+class TipoProducto{
+    codigo: string
+    nombre: string
+    impuesto: numeric
+}
+
+class Proveedor{
+
+}
+
+class Producto{
+    codigo: string
+    tipo: TipoProducto
+    StockDisponible: integer
+    StockMinimo: integer
+    precio: numeric
+    proveedor: Proveedor
+}
+
+class RepositorioProducto{
+    productos: List
+
+}
+
+class CasoUsoProducto{
+    RepositorioProducto: RepositorioProducto
+    + constructor(repositorioProducto)
+    
+    + crear(producto)
+    + editar(producto)
+    + eliminar(producto)
+
+    + Presentar()
+    + abastecer()
+
+
+
+
+}
+
+
+
+
+
+@enduml
